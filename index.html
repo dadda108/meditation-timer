@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peaceful Meditation Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Peaceful Meditation</h1>
+        <div class="timer-container">
+            <div class="stage-name" id="stageName">Ready to begin</div>
+            <div class="timer" id="timer">00:00</div>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div class="stages-container">
+                <div id="stagesList" class="stages-list">
+                    <!-- Stage template -->
+                    <div class="stage">
+                        <input type="text" class="stage-title" value="Warm Up" placeholder="Stage name">
+                        <input type="number" class="stage-duration" min="1" max="60" value="3">
+                        <span class="minutes-label">min</span>
+                        <button class="remove-stage">×</button>
+                    </div>
+                    <div class="stage">
+                        <input type="text" class="stage-title" value="Main Meditation" placeholder="Stage name">
+                        <input type="number" class="stage-duration" min="1" max="60" value="10">
+                        <span class="minutes-label">min</span>
+                        <button class="remove-stage">×</button>
+                    </div>
+                    <div class="stage">
+                        <input type="text" class="stage-title" value="Deep Meditation" placeholder="Stage name">
+                        <input type="number" class="stage-duration" min="1" max="60" value="5">
+                        <span class="minutes-label">min</span>
+                        <button class="remove-stage">×</button>
+                    </div>
+                    <div class="stage">
+                        <input type="text" class="stage-title" value="Rest" placeholder="Stage name">
+                        <input type="number" class="stage-duration" min="1" max="60" value="2">
+                        <span class="minutes-label">min</span>
+                        <button class="remove-stage">×</button>
+                    </div>
+                </div>
+                <button id="addStage" class="btn btn-small">+ Add Stage</button>
+            </div>
+            <div class="buttons">
+                <button id="startBtn" class="btn">Start</button>
+                <button id="resetBtn" class="btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <audio id="stageSound" src="https://assets.mixkit.co/active_storage/sfx/2424/2424.wav"></audio>
+    <audio id="endSound" src="https://assets.mixkit.co/active_storage/sfx/2432/2432.wav"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
